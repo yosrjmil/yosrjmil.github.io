@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yosr Jmil | Portfolio</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAE50lEQVR4nOWb3W8UVRjGn3d3+2kxthhBo9aaUpqNAYR4IRCCrdIaainav4BEEU1IQLjwQmvUeGW91BDjldJoSytUoohC/aihKIJEi9SlUlrbbrdtaqHBfrAzXpQ5u2fmzHZm92x3u2eSZmZ7nvO+7+/Mc87O7szSI5tqAQBEAC20jxzrDjRO4rjSWOq0ashtLp9LeD0ZYJLgo+sjp7l8DguyP+PpA887NHogYuTyOQy0lOBFU9V2angyGF40NSwajwLw/CCY2kQOyER4Q2NZy8wOyGR487ogcEDmw1v2nijRUnurS0TDnO5R9cxHHGAaEYXgdX4KqAXPjj2Uvh9sFqMe3d4BmQ/PHKAsPJFoDVAI3uoAxeB5BygIH3GAovDzDlAYnp8CCsITFnJAhsMTxfpO0EWg7OxsvP/BIRQWFQEARoJB7Nu7B7quCfvtev4lbK2sgrG9/foB9PUGOM2hj49hoW3frh0JwcPWAS4D3ZqbRVtrCytsxcqVeHzjJmG/wrsKsXlLBdP+dv5nCzwtiD6/JQovXgPitNmpb09iNBRixdXufE7Yv7pmB3xZWQAAXddxtOWwMN5oKIix23/X/53gwMdCQYyHggnDE8z3BeKEB4Bw+BZaWz7Fiy/vBQAUF5fg0fUbcPHCr0xbUFCAJyqrGci5sz9hcKBPmOuNg7vZsX/NeuzZ38D6vfPqbinwvAMSgDde//hDB4aHhyIuqKvntE9WbUduXh4AQNM0tLc2Oc4VvcmCJyR4IWQOqOsaWpubWKFl5X6sLveDCMjJycFT1TWsrauzAyPDg65ysQGQBD/vAEnwxvHZM50Y6L/Gin2mrh4EYGvFNhQsuxMAEA6Hcfzzz+KCtwOJB56fAhLgiQDoOtpaIi5Ys24DHi5dhartdex/nd99g/GxEefvPuYBkARPiONCKBa8sT//Sxeu9gZYwa+99S6Klt8NAJibm8WXx5qdw5NgACTBx3ZAnPDGvq35METb96dOYHJi3BW8ZQ2QBE+wuz2eIDwB6P79Av7quYSy1X5W+MzMNL7+4oglTnFJKbP6aGgIM//d5HObB0ASvNgBEuANzdHmT7jCO04ex9SNSUucgw2NONDQiFcaGlFSWi7MFdMBccITHHwjFC88AQj0dHOFX+npFsbRNI1pvF6vReP1elm7poWlwfMOkAwvOnOw0UzdmGTt993/kEWz4t4HWLvIQfHCRxyQJHgjDoO36dd7+Q+mqXj6WZT517K2B0vKsGVbHWvvv/KnNHgim0VQFrzZAXaa0yfasPaxjfB4vMjNy8cL+9/E9PRNaOEw8u9Yxvrruo4zp9ulwfNTIAnwTh0w1P83mj58D3OzM0ybm5tvgf/qyEcYuHpZGjzB5ADZ8GYHIIb24rlO/NMXwObKGqzyr0Ph8nvg9WVh6voE+gKX0NXRjsFrAanwRADV76zVkwWfLI00eNxeBFWFJwI8KsMzB6QaLFXwRIt0ayxd4SMOUBR+3gEKw/NTQEF4QpJujS0V+NgOUADecACpCk8EWtRnhNIMnlsDHP/GJoPgiSgNLoRSdeZ5B0S7QA14Ml6n7EIo1Wfe0JgXQUpmsjSB59Y7kQNIYrK0hhc5IDIICsDbOYDvkMHwRKKnxEQdY/zwMM3haSGN02eEjECuf1aXInhyGsfnMllkINITntzG+R8Mfibjg8d8hAAAAABJRU5ErkJggg==">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --bg:#FAF7F2;--bg-alt:#F1EBE0;--bg-card:#FFFFFF;
+  --text:#1E1B16;--text-muted:#6E6659;--text-light:#A39A89;
+  --accent:#2C3B4E;--accent-soft:rgba(44,59,78,0.08);--accent-mid:rgba(44,59,78,0.18);
+  --accent2:#A9824F;--border:rgba(30,27,22,0.08);
+  --mono:'JetBrains Mono',ui-monospace,'SF Mono',monospace;
+  --shadow:0 1px 3px rgba(30,27,22,0.05),0 4px 16px rgba(30,27,22,0.04);
+  --shadow-lg:0 8px 40px rgba(30,27,22,0.09);
+  --nav-bg:rgba(250,247,242,0.85);
+  --cursor-color:#2C3B4E;
+}
+[data-theme="dark"]{
+  --bg:#16130f;--bg-alt:#1e1a15;--bg-card:#242019;
+  --text:#f3efe8;--text-muted:#b8ae9c;--text-light:#7a7161;
+  --border:rgba(255,255,255,0.08);
+  --accent:#D8B978;--accent2:#8FA0AC;
+  --accent-soft:rgba(216,185,120,0.10);--accent-mid:rgba(216,185,120,0.22);
+  --shadow:0 1px 3px rgba(0,0,0,0.3),0 4px 16px rgba(0,0,0,0.2);
+  --shadow-lg:0 8px 40px rgba(0,0,0,0.4);
+  --nav-bg:rgba(22,19,15,0.88);
+}
+
+html{scroll-behavior:smooth}
+body{
+  background:
+    linear-gradient(var(--border) 1px,transparent 1px),
+    linear-gradient(90deg,var(--border) 1px,transparent 1px),
+    var(--bg);
+  background-size:56px 56px,56px 56px,auto;
+  background-attachment:fixed;
+  color:var(--text);
+  font-family:'Inter',-apple-system,sans-serif;
+  font-size:16px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  transition:background-color .4s,color .4s;
+  cursor:none;
+}
+h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;letter-spacing:-0.02em}
+
+/* ── CURSEUR CUSTOM ── */
+#cursor{
+  position:fixed;width:12px;height:12px;border-radius:50%;
+  background:var(--accent);pointer-events:none;z-index:99999;
+  transform:translate(-50%,-50%);
+  transition:width .2s,height .2s,opacity .2s;
+  mix-blend-mode:multiply;
+}
+[data-theme="dark"] #cursor{mix-blend-mode:screen}
+#cursor-ring{
+  position:fixed;width:36px;height:36px;border-radius:50%;
+  border:1.5px solid var(--accent);pointer-events:none;z-index:99998;
+  transform:translate(-50%,-50%);opacity:.4;
+  transition:width .35s cubic-bezier(.25,.46,.45,.94),height .35s cubic-bezier(.25,.46,.45,.94),opacity .3s;
+}
+#cursor.hover{width:6px;height:6px}
+#cursor-ring.hover{width:52px;height:52px;opacity:.2}
+#cursor.click{width:20px;height:20px}
+
+/* ── LOADER ── */
+#loader{
+  position:fixed;inset:0;z-index:9999;background:var(--bg);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;
+  transition:opacity .5s ease;
+}
+.loader-svg-wrap{display:flex;align-items:center;justify-content:center}
+.lux-label{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.35em;text-transform:uppercase;color:#aaa;opacity:0;animation:fadeIn .6s .5s forwards}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 48px;height:60px;
+  background:var(--nav-bg);
+  backdrop-filter:blur(16px) saturate(180%);
+  -webkit-backdrop-filter:blur(16px) saturate(180%);
+  border-bottom:1px solid var(--border);
+  transition:background .4s;
+}
+.nav-logo-svg{display:flex;align-items:center;text-decoration:none}
+.logo-mark{width:36px;height:36px;flex-shrink:0}
+.nav-links{display:flex;gap:8px;list-style:none;align-items:center}
+.nav-links a{font-family:var(--mono);font-size:13px;font-weight:500;color:var(--text-muted);text-decoration:none;padding:6px 14px;border-radius:8px;transition:color .2s,background .2s}
+.nav-links a:hover{color:var(--text);background:var(--bg-alt)}
+.nav-cta{background:var(--accent)!important;color:#fff!important;font-family:var(--mono);font-size:13px;font-weight:500;padding:8px 20px!important;border-radius:8px;text-decoration:none;transition:filter .2s,transform .2s}
+.nav-cta:hover{filter:brightness(1.12);transform:translateY(-1px)}
+.nav-controls{display:flex;align-items:center;gap:8px}
+.theme-toggle{display:flex;align-items:center;gap:6px;background:var(--bg-alt);border:1px solid var(--border);border-radius:20px;padding:5px 10px;cursor:none;font-size:13px;font-weight:500;color:var(--text-muted);transition:background .2s,color .2s;user-select:none}
+.theme-toggle:hover{color:var(--text);background:var(--bg-card)}
+.theme-toggle .toggle-track{width:32px;height:18px;background:#ccc;border-radius:9px;position:relative;transition:background .3s;flex-shrink:0}
+[data-theme="dark"] .theme-toggle .toggle-track{background:var(--accent)}
+.theme-toggle .toggle-knob{position:absolute;top:2px;left:2px;width:14px;height:14px;border-radius:50%;background:#fff;transition:transform .3s;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+[data-theme="dark"] .theme-toggle .toggle-knob{transform:translateX(14px)}
+.theme-toggle .toggle-icon{font-size:14px;display:flex;align-items:center;width:16px;height:16px}
+.lang-toggle{display:flex;align-items:center;background:var(--bg-alt);border:1px solid var(--border);border-radius:20px;padding:3px;cursor:none;gap:2px}
+.lang-btn{font-size:12px;font-weight:600;letter-spacing:.04em;padding:4px 10px;border-radius:16px;border:none;background:transparent;color:var(--text-muted);cursor:none;transition:all .2s;font-family:'Inter',sans-serif}
+.lang-btn.active{background:var(--accent);color:#fff}
+.lang-btn:hover:not(.active){color:var(--text)}
+
+/* ── HERO ── */
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;text-align:left;padding:120px 48px 80px;overflow:hidden}
+#neural-canvas{position:absolute;inset:0;width:100%;height:100%}
+.hero-content{position:relative;z-index:2;max-width:760px}
+.hero-kicker{font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:.04em;color:var(--accent2);margin-bottom:14px;opacity:0;animation:fadeUp .7s .05s forwards}
+.hero-name{font-size:clamp(52px,9vw,100px);font-weight:700;line-height:1.0;color:var(--text);margin-bottom:8px;opacity:0;animation:fadeUp .7s .2s forwards}
+.hero-name .accent-word{background:linear-gradient(135deg,#2C3B4E 0%,#A9824F 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(16px,2.2vw,22px);font-weight:500;color:var(--text-muted);margin-bottom:16px;opacity:0;animation:fadeUp .7s .35s forwards}
+
+/* Typewriter */
+.typewriter-wrap{height:32px;display:flex;align-items:center;justify-content:flex-start;margin-bottom:36px;opacity:0;animation:fadeUp .7s .5s forwards;gap:8px}
+.typewriter-prompt{font-family:var(--mono);font-size:clamp(14px,1.8vw,18px);font-weight:600;color:var(--accent2)}
+.typewriter{font-size:clamp(14px,1.8vw,18px);font-weight:600;color:var(--accent);font-family:var(--mono)}
+.typewriter-cursor{display:inline-block;width:2px;height:1em;background:var(--accent);margin-left:3px;animation:blink 1s infinite;vertical-align:middle}
+
+.hero-actions{display:flex;gap:14px;justify-content:flex-start;flex-wrap:wrap;opacity:0;animation:fadeUp .7s .65s forwards}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;font-size:14px;font-weight:500;font-family:var(--mono);padding:13px 26px;border-radius:10px;text-decoration:none;transition:transform .2s,filter .2s,box-shadow .2s}
+.btn-primary:hover{transform:translateY(-2px);filter:brightness(1.1);box-shadow:0 8px 28px rgba(169,130,79,.35)}
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--text-muted);font-size:14px;font-weight:500;font-family:var(--mono);padding:13px 26px;border-radius:10px;text-decoration:none;border:1.5px solid var(--border);transition:transform .2s,border-color .2s,color .2s}
+.btn-secondary:hover{transform:translateY(-2px);border-color:var(--accent-mid);color:var(--text)}
+
+
+.scroll-cue{position:absolute;bottom:100px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0;animation:fadeIn 1s 1.2s forwards}
+.scroll-cue span{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-light)}
+.scroll-line{width:1px;height:36px;background:linear-gradient(to bottom,var(--accent),transparent);animation:scrollPulse 2s 1.5s infinite}
+
+/* ── SECTIONS ── */
+.section-wrap{max-width:1100px;margin:0 auto;padding:96px 40px}
+.section-label{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:none;color:var(--accent);margin-bottom:14px}
+.section-label::before{content:'>';font-weight:700;color:var(--accent2)}
+.section-heading{font-size:clamp(30px,4.5vw,50px);font-weight:700;line-height:1.1;margin-bottom:16px}
+.section-sub{font-size:17px;color:var(--text-muted);max-width:500px;line-height:1.75;margin-bottom:56px}
+
+/* ── À PROPOS ── */
+.about-text p{font-size:16px;color:var(--text-muted);line-height:1.8;margin-bottom:14px}
+
+
+/* ── PROJETS ── */
+.projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.project-card{background:var(--bg-card);border:1px solid var(--border);border-radius:18px;padding:36px;box-shadow:var(--shadow);position:relative;overflow:hidden;opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s,box-shadow .25s,border-color .25s,background .4s}
+.project-card.visible{opacity:1;transform:none}
+.project-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--accent-mid)}
+.project-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));opacity:0;transition:opacity .3s}
+.project-card:hover::before{opacity:1}
+
+/* Glow on hover */
+.project-card::after{content:'';position:absolute;inset:0;border-radius:18px;background:radial-gradient(600px circle at var(--mouse-x,50%) var(--mouse-y,50%),rgba(44,59,78,0.05),transparent 40%);opacity:0;transition:opacity .3s}
+.project-card:hover::after{opacity:1}
+
+.project-pill{display:inline-block;font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.03em;text-transform:none;padding:4px 11px;border-radius:6px;margin-bottom:16px}
+.pill-violet{background:var(--accent-soft);color:var(--accent)}
+.pill-cyan{background:rgba(169,130,79,.12);color:#8A6A3C}
+.pill-slate{background:rgba(100,116,139,.10);color:#475569}
+.project-title{font-size:20px;font-weight:700;margin-bottom:10px}
+.project-desc{font-size:14.5px;color:var(--text-muted);line-height:1.75;margin-bottom:18px}
+.tech-stack{display:flex;flex-wrap:wrap;gap:6px}
+.tech-tag{font-family:var(--mono);font-size:12px;font-weight:500;padding:3px 10px;border-radius:6px;background:var(--bg-alt);color:var(--text-muted);border:1px solid var(--border);transition:background .4s}
+.tech-tag::before{content:'<';margin-right:1px;color:var(--accent);opacity:.55}
+.tech-tag::after{content:'/>';margin-left:1px;color:var(--accent);opacity:.55}
+
+/* ── COMPÉTENCES ── */
+.skills-bg{background:var(--bg-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);transition:background .4s}
+.tools-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tool-chip{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:18px 14px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;box-shadow:var(--shadow);opacity:0;transform:translateY(16px);transition:opacity .5s,transform .5s,box-shadow .2s,border-color .2s}
+.tool-chip.visible{opacity:1;transform:none}
+.tool-chip:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);border-color:var(--accent-mid)}
+.tool-chip-icon{width:38px;height:38px;border-radius:10px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center}
+.tool-chip-name{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--text)}
+.tool-chip-ctx{font-family:var(--mono);font-size:11px;color:var(--text-muted);line-height:1.4}
+.tools-category{margin-bottom:28px}
+.tools-cat-label{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:none;color:var(--text-muted);margin-bottom:10px;padding-left:2px}
+.tools-cat-label::before{content:'# '}
+
+/* ── PARCOURS ── */
+.timeline{display:flex;flex-direction:column;position:relative;padding-left:32px}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:linear-gradient(to bottom,var(--accent),var(--accent2),transparent)}
+.tl-item{position:relative;padding-bottom:32px;opacity:0;transform:translateX(-16px);transition:opacity .5s,transform .5s}
+.tl-item.visible{opacity:1;transform:none}
+.tl-item:last-child{padding-bottom:0}
+.tl-dot{position:absolute;left:-29px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--bg-card);border:2px solid var(--accent);box-shadow:0 0 0 3px var(--accent-soft);transition:background .4s}
+.tl-dot.current{background:var(--accent)}
+.tl-date{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.02em;text-transform:none;color:var(--accent);margin-bottom:4px}
+.tl-date::before{content:'// '}
+.tl-role{font-size:17px;font-weight:700;font-family:'Space Grotesk',sans-serif}
+.tl-place{font-size:14px;color:var(--text-muted);margin-bottom:6px}
+.tl-desc{font-size:14px;color:var(--text-muted);line-height:1.7}
+.timeline-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.timeline-group-title{font-size:14px;font-weight:700;color:var(--text-muted);letter-spacing:.07em;text-transform:uppercase;margin-bottom:28px}
+
+/* ── CONTACT ── */
+.contact-section{position:relative;text-align:center;padding:120px 40px;overflow:hidden;border-top:1px solid var(--border)}
+.contact-bg-glow{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 100%,rgba(169,130,79,0.10),transparent);pointer-events:none}
+.contact-sub{font-size:17px;color:var(--text-muted);max-width:420px;margin:0 auto 48px;line-height:1.7}
+.contact-row{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.contact-chip{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:30px;background:var(--bg-card);border:1px solid var(--border);box-shadow:var(--shadow);text-decoration:none;color:var(--text);font-size:14px;font-weight:500;transition:transform .2s,box-shadow .2s,border-color .2s}
+.contact-chip:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg);border-color:var(--accent-mid)}
+.contact-chip svg{color:var(--accent);flex-shrink:0}
+
+/* Marquee */
+.marquee-wrap{overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:16px 0;margin:80px 0 0}
+.marquee-track{display:flex;gap:0;animation:marquee 22s linear infinite;white-space:nowrap}
+.marquee-wrap:hover .marquee-track{animation-play-state:paused}
+.marquee-item{display:inline-flex;align-items:center;gap:12px;padding:0 32px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted)}
+.marquee-dot{width:4px;height:4px;border-radius:50%;background:var(--accent);flex-shrink:0}
+
+/* ── FOOTER ── */
+footer{padding:28px 48px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;background:var(--bg);transition:background .4s}
+footer p{font-family:var(--mono);font-size:13px;color:var(--text-light)}
+
+/* ── REVEAL ── */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* ── KEYFRAMES ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+@keyframes scrollPulse{0%{transform:scaleY(1);opacity:1}100%{transform:scaleY(1.3) translateY(4px);opacity:0}}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes loaderPulse{0%,100%{opacity:1}50%{opacity:.5}}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  nav{padding:0 16px}
+  .nav-links{display:none}
+  .projects-grid,.timeline-grid{grid-template-columns:1fr}
+  .section-wrap{padding:72px 20px}
+  .scroll-cue{bottom:60px}
+  .hero{padding:120px 22px 80px}
+}
+@media(max-width:700px){
+  .tools-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:560px){
+  body{cursor:auto}
+  #cursor,#cursor-ring{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+
+<!-- CURSEUR CUSTOM -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-svg-wrap">
+    <svg width="110" height="110" viewBox="0 0 36 36" fill="none">
+      <defs>
+        <linearGradient id="loader-lg" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#2C3B4E"/>
+          <stop offset="100%" stop-color="#A9824F"/>
+        </linearGradient>
+      </defs>
+      <circle cx="18" cy="18" r="16" stroke="url(#loader-lg)" stroke-width="1.2" fill="none" style="animation:loaderPulse 1.6s ease-in-out infinite"/>
+      <text x="18" y="23" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" fill="url(#loader-lg)" letter-spacing="1">YJ</text>
+    </svg>
+  </div>
+  <p class="lux-label">Yosr Jmil</p>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo-svg">
+    <svg class="logo-mark" viewBox="0 0 36 36" fill="none">
+      <defs>
+        <linearGradient id="lg-a" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#2C3B4E"/>
+          <stop offset="100%" stop-color="#A9824F"/>
+        </linearGradient>
+      </defs>
+      <circle cx="18" cy="18" r="16" stroke="url(#lg-a)" stroke-width="1.2" fill="none"/>
+      <text x="18" y="23" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600" fill="url(#lg-a)" letter-spacing="1">YJ</text>
+    </svg>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about" data-i18n="nav.about">À propos</a></li>
+    <li><a href="#projets" data-i18n="nav.projects">Projets</a></li>
+    <li><a href="#competences" data-i18n="nav.skills">Compétences</a></li>
+    <li><a href="#parcours" data-i18n="nav.journey">Parcours</a></li>
+    <li><a href="#contact" class="nav-cta" data-i18n="nav.contact">Me contacter</a></li>
+  </ul>
+  <div class="nav-controls">
+    <div class="lang-toggle" id="langToggle">
+      <button class="lang-btn active" data-lang="fr">FR</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+    <div class="theme-toggle" id="themeToggle">
+      <div class="toggle-track"><div class="toggle-knob"></div></div>
+      <span class="toggle-icon">
+        <svg id="iconMoon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg id="iconSun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <canvas id="neural-canvas"></canvas>
+  <div class="hero-content">
+    <h1 class="hero-name">Yosr<br><span class="accent-word">Jmil</span></h1>
+    <p class="hero-title" data-i18n="hero.title">Élève-ingénieure · EPF Paris-Cachan<br>Stagiaire ingénieure Data &amp; IA · Safran Electronics &amp; Defense</p>
+    <div class="typewriter-wrap">
+      <span class="typewriter-prompt">&gt;</span>
+      <span class="typewriter" id="typewriter"></span><span class="typewriter-cursor"></span>
+    </div>
+    <div class="hero-actions">
+      <a href="#projets" class="btn-primary">
+        <span data-i18n="hero.cta">Voir mes projets</span>
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/yosr-jmil-880119362" target="_blank" class="btn-secondary">
+        LinkedIn
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+  </div>
+
+  <div class="scroll-cue">
+    <span data-i18n="hero.scroll">Défiler</span>
+    <div class="scroll-line"></div>
+  </div>
+</header>
+
+<!-- À PROPOS -->
+<section id="about">
+  <div class="section-wrap">
+    <p class="section-label reveal" data-i18n="about.label">À propos</p>
+    <h2 class="section-heading reveal" data-i18n="about.heading">Qui suis-je ?</h2>
+    <div class="about-text reveal">
+      <p data-i18n="about.p1">Élève-ingénieure à l'EPF Paris-Cachan, je m'intéresse particulièrement à l'intelligence artificielle : comprendre comment ces systèmes sont conçus et les appliquer à des besoins concrets. Mon parcours m'a permis d'acquérir des bases solides en développement logiciel, en IoT et en architecture logicielle.</p>
+      <p data-i18n="about.p2">Aujourd'hui en 4e année dans la majeure <b>Systèmes numériques et intelligents</b>, je me concentre sur ce qui me passionne vraiment : l'<b>IA générative, les LLMs et le Machine Learning</b>. Depuis octobre 2026, je suis stagiaire chez <b>Safran Electronics &amp; Defense</b>, où je construis un outil de veille stratégique basé sur l'IA : de la collecte et du chunking des documents jusqu'à la génération de réponses par LLM (RAG).</p>
+    </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJETS -->
+<section id="projets" style="background:var(--bg-alt);border-top:1px solid var(--border);">
+  <div class="section-wrap">
+    <p class="section-label reveal" data-i18n="projects.label">Projets</p>
+    <h2 class="section-heading reveal" data-i18n="projects.heading">Stage &amp; projets EPF</h2>
+    <div class="projects-grid">
+      <div class="project-card" style="grid-column:span 2;border-color:var(--accent-mid);">
+        <span class="project-pill pill-cyan" data-i18n="projects.p0.pill">Stage · Safran Electronics &amp; Defense · 2026</span>
+        <h3 class="project-title" data-i18n="projects.p0.title">Outil de veille stratégique par IA</h3>
+        <p class="project-desc" data-i18n="projects.p0.desc">Conception d'une chaîne complète de veille stratégique par IA générative : collecte de sources externes et internes, nettoyage, découpage (chunking) et vectorisation des documents, stockage en data lake, puis recherche et génération de réponses par LLM (RAG). Chaque résultat reste traçable jusqu'à sa source.</p>
+        <div class="tech-stack"><span class="tech-tag">Python</span><span class="tech-tag">RAG</span><span class="tech-tag">Chunking</span><span class="tech-tag">LLM</span><span class="tech-tag">Embeddings</span><span class="tech-tag">Data lake</span><span class="tech-tag">Git</span></div>
+      </div>
+      <div class="project-card" style="grid-column:span 2;border-color:var(--accent-mid);">
+        <span class="project-pill pill-violet" data-i18n="projects.p1.pill">Projet Challenge EPF · 2026</span>
+        <h3 class="project-title">FactoryPulse Aéro</h3>
+        <p class="project-desc" data-i18n="projects.p1.desc">Système de surveillance industrielle temps réel d'une ligne de rivetage robotisée, inspiré des usines Airbus/Safran. Simulateur Python de capteurs avec détection d'anomalies (seuils + Z-score), API FastAPI et application mobile React Native. Stack entièrement dockerisée.</p>
+        <div class="tech-stack"><span class="tech-tag">Python</span><span class="tech-tag">FastAPI</span><span class="tech-tag">React Native</span><span class="tech-tag">Docker</span></div>
+      </div>
+      <div class="project-card">
+        <span class="project-pill pill-cyan" data-i18n="projects.p2.pill">IoT &amp; Web · 3ème année</span>
+        <h3 class="project-title" data-i18n="projects.p2.title">Système Connecté &amp; Dashboard Web</h3>
+        <p class="project-desc" data-i18n="projects.p2.desc">Déploiement de capteurs thermiques et d'humidité dans un gymnase, avec visualisation des données en temps réel via un site web HTML/CSS/JavaScript.</p>
+        <div class="tech-stack"><span class="tech-tag">IoT</span><span class="tech-tag">HTML/CSS/JS</span><span class="tech-tag">Real-time</span></div>
+      </div>
+      <div class="project-card">
+        <span class="project-pill pill-slate">Java · 2025</span>
+        <h3 class="project-title" data-i18n="projects.p3.title">Jeu interactif Java</h3>
+        <p class="project-desc" data-i18n="projects.p3.desc">Conception d'un jeu interactif complet avec interface graphique et logique logicielle, en architecture orientée objet.</p>
+        <div class="tech-stack"><span class="tech-tag">Java</span><span class="tech-tag">OOP</span><span class="tech-tag">GUI</span></div>
+      </div>
+      <div class="project-card">
+        <span class="project-pill pill-violet" data-i18n="projects.p4.pill">Mécatronique · 2025</span>
+        <h3 class="project-title" data-i18n="projects.p4.title">Fauteuil roulant motorisé</h3>
+        <p class="project-desc" data-i18n="projects.p4.desc">Système de motorisation pour fauteuil roulant : intégration électronique, mécanique et programmation, dans le cadre d'un projet pluridisciplinaire.</p>
+        <div class="tech-stack"><span class="tech-tag" data-i18n="tag.elec">Électronique</span><span class="tech-tag" data-i18n="tag.meca">Mécanique</span><span class="tech-tag" data-i18n="tag.prog">Programmation</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPÉTENCES -->
+<section class="skills-bg" id="competences">
+  <div class="section-wrap">
+    <p class="section-label reveal" data-i18n="skills.label">Compétences</p>
+
+    <div class="tools-category">
+      <div class="tools-cat-label" data-i18n="skills.cat0">IA générative &amp; data</div>
+      <div class="tools-grid">
+        <div class="tool-chip skill-card"><div class="tool-chip-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><path d="M8 11h6M11 8v6"/></svg></div><div class="tool-chip-name">RAG</div><div class="tool-chip-ctx" data-i18n="skills.rag.ctx">Veille IA · Safran</div></div>
+        <div class="tool-chip skill-card"><div class="tool-chip-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg></div><div class="tool-chip-name">LLM &amp; prompts</div><div class="tool-chip-ctx" data-i18n="skills.llm.ctx">Génération de réponses · Safran</div></div>
+        <div class="tool-chip skill-card"><div class="tool-chip-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><line x1="7" y1="10" x2="17" y2="10" stroke-dasharray="2 2"/><line x1="7" y1="15" x2="17" y2="15" stroke-dasharray="2 2"/></svg></div><div class="tool-chip-name">Chunking</div><div class="tool-chip-ctx" data-i18n="skills.chunk.ctx">Découpage de documents PDF · Safran</div></div>
+        <div class="tool-chip skill-card"><div class="tool-chip-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><circle cx="12" cy="10" r="1.5"/><path d="M6.7 7.2l4 2M17.3 7.2l-4 2M12 11.5V16"/></svg></div><div class="tool-chip-name">Embeddings</div><div class="tool-chip-ctx" data-i18n="skills.emb.ctx">Vectorisation · recherche sémantique</div></div>
+        <div class="tool-chip skill-card"><div class="tool-chip-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h6l3 6h9"/><path d="M3 18h6l3-6"/><polyline points="18 9 21 12 18 15"/></svg></div><div class="tool-chip-name">Pipelines de données</div><div class="tool-chip-ctx" data-i18n="skills.pipe.ctx">Collecte · nettoyage · data lake</div></div>
+      </div>
+    </div>
+
+    <div class="tools-category">
+      <div class="tools-cat-label" data-i18n="skills.cat1">Langages &amp; développement</div>
+      <div class="tools-grid">
+        <div class="tool-chip skill-card"><div class="tool-chip-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20s-1 1 2 1.5c3.5.6 5.5.5 9.5-.5 0 0 1-.3.5-1"/><path d="M5 17s-1 1 2 1.2c4 .5 7 .5 10-.5 0 0 .8-.3.5-1"/><path d="M8 4s-3 3 1 4c4 1 7 1 7-3"/><path d="M9 11s-2 1.5 2 2c4 .5 7 0 7-2.5 0-1.5-1-2-1-2"/></svg></div><div class="tool-chip-name">Java</div><div class="tool-chip-ctx" data-i18n="skills.java.ctx">Jeu interactif · POO</div></div>
+        <div class="tool-chip skill-card"><div class="tool-chip-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><div class="tool-chip-name">Python</div><div class="tool-chip-ctx" data-i18n="skills.python.ctx">Safran · FactoryPulse</div></div>
+        <div class="tool-chip skill-card"><div class="tool-chip-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="9" r="2.5"/><path d="M6 8.5v7M18 11.5c0 4-6 3-10 5"/></svg></div><div class="tool-chip-name">Git / GitLab</div><div class="tool-chip-ctx" data-i18n="skills.git.ctx">Versioning · Safran</div></div>
+        <div class="tool-chip skill-card"><div class="tool-chip-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="12" y1="2" x2="12" y2="22"/></svg></div><div class="tool-chip-name">HTML / CSS / JS</div><div class="tool-chip-ctx" data-i18n="skills.web.ctx">Dashboard IoT gymnase</div></div>
+        <div class="tool-chip skill-card"><div class="tool-chip-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/></svg></div><div class="tool-chip-name">React Native</div><div class="tool-chip-ctx" data-i18n="skills.rn.ctx">App mobile FactoryPulse</div></div>
+      </div>
+    </div>
+
+    <div class="tools-category">
+      <div class="tools-cat-label" data-i18n="skills.cat2">IoT &amp; backend</div>
+      <div class="tools-grid">
+        <div class="tool-chip skill-card"><div class="tool-chip-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div class="tool-chip-name">FastAPI</div><div class="tool-chip-ctx" data-i18n="skills.fastapi.ctx">API REST · FactoryPulse</div></div>
+        <div class="tool-chip skill-card"><div class="tool-chip-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="10" width="4" height="3"/><rect x="6" y="10" width="4" height="3"/><rect x="11" y="10" width="4" height="3"/><rect x="6" y="6" width="4" height="3"/><rect x="11" y="6" width="4" height="3"/><path d="M22 12c-.3-2-2-2-2-2H3c0 2 1 5 8 5s10-3 11-3z"/></svg></div><div class="tool-chip-name">Docker</div><div class="tool-chip-ctx" data-i18n="skills.docker.ctx">Stack dockerisée</div></div>
+      </div>
+    </div>
+
+    <div class="tools-category">
+      <div class="tools-cat-label" data-i18n="skills.cat3">Données &amp; bureautique</div>
+      <div class="tools-grid">
+        <div class="tool-chip skill-card"><div class="tool-chip-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v5c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 10v5c0 1.66 4 3 9 3s9-1.34 9-3v-5"/><path d="M3 15v4c0 1.66 4 3 9 3s9-1.34 9-3v-4"/></svg></div><div class="tool-chip-name">SQL / Access</div><div class="tool-chip-ctx" data-i18n="skills.sql.ctx">Bases de données</div></div>
+        <div class="tool-chip skill-card"><div class="tool-chip-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="2" y1="9" x2="22" y2="9"/><line x1="2" y1="15" x2="22" y2="15"/><line x1="8" y1="3" x2="8" y2="21"/><line x1="14" y1="3" x2="14" y2="21"/></svg></div><div class="tool-chip-name">Excel / VBA</div><div class="tool-chip-ctx" data-i18n="skills.excel.ctx">Analyse &amp; automatisation</div></div>
+        <div class="tool-chip skill-card"><div class="tool-chip-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="5" rx="1"/><rect x="14" y="16" width="7" height="5" rx="1"/><path d="M6.5 8v5h11v3"/></svg></div><div class="tool-chip-name">draw.io</div><div class="tool-chip-ctx" data-i18n="skills.drawio.ctx">Logigrammes · Safran</div></div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARCOURS -->
+<section id="parcours">
+  <div class="section-wrap">
+    <p class="section-label reveal" data-i18n="journey.label">Parcours</p>
+    <h2 class="section-heading reveal" data-i18n="journey.heading">Formation &amp; expériences.</h2>
+    <div class="timeline-grid" style="margin-top:40px;">
+      <div>
+        <div class="timeline-group-title reveal" data-i18n="journey.education">Formation</div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot current"></div>
+            <div class="tl-date" data-i18n="journey.e1.date">Sept. 2023 – Présent</div>
+            <div class="tl-role">EPF École d'Ingénieurs · Paris-Cachan</div>
+            <div class="tl-place" data-i18n="journey.e1.place">Cycle ingénieur · Majeure Systèmes numériques et intelligents</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-date">2021 – 2023</div>
+            <div class="tl-role">Lycée Saint-Nicolas, Paris 6ème</div>
+            <div class="tl-place" data-i18n="journey.e2.place">Baccalauréat général</div>
+            <div class="tl-desc" data-i18n="journey.e2.desc">Spécialisation Mathématiques et Physique-Chimie.</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="timeline-group-title reveal" data-i18n="journey.experience">Expériences &amp; Engagement</div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot current"></div>
+            <div class="tl-date" data-i18n="journey.x0.date">Oct. 2026 – Janv. 2027</div>
+            <div class="tl-role" data-i18n="journey.x0.role">Stage ingénieure Data &amp; IA · Safran Electronics &amp; Defense</div>
+            <div class="tl-place" data-i18n="journey.x0.place">Stage élève-ingénieure · Malakoff</div>
+            <div class="tl-desc" data-i18n="journey.x0.desc">Développement d'un outil de veille stratégique par IA générative (RAG) : collecte, nettoyage, chunking et vectorisation de documents, connexion à un LLM, avec traçabilité des sources.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot current"></div>
+            <div class="tl-date" data-i18n="journey.x1.date">Depuis 2025</div>
+            <div class="tl-role" data-i18n="journey.x1.role">Vice-Présidente · Tutorat EPF</div>
+            <div class="tl-place" data-i18n="journey.x1.place">Engagement associatif</div>
+            <div class="tl-desc" data-i18n="journey.x1.desc">Pilotage d'une équipe de tuteurs, coordination du soutien scolaire, recrutement et suivi pédagogique.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-date" data-i18n="journey.x2.date">2024 – 2025</div>
+            <div class="tl-role" data-i18n="journey.x2.role">Pôle Sponsor · EUROAVIA</div>
+            <div class="tl-place" data-i18n="journey.x2.place">Engagement associatif</div>
+            <div class="tl-desc" data-i18n="journey.x2.desc">Recherche de partenaires stratégiques et développement des relations entreprises.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-date" data-i18n="journey.x5.date">2025 – 2026</div>
+            <div class="tl-role" data-i18n="journey.x5.role">Pôle Com · EUROAVIA</div>
+            <div class="tl-place" data-i18n="journey.x5.place">Engagement associatif</div>
+            <div class="tl-desc" data-i18n="journey.x5.desc">Communication et visibilité de l'association auprès des membres et partenaires.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-date">2025</div>
+            <div class="tl-role" data-i18n="journey.x3.role">Stage d'Exécution · Cabinet Dentaire</div>
+            <div class="tl-place" data-i18n="journey.x3.place">Stage professionnel</div>
+            <div class="tl-desc" data-i18n="journey.x3.desc">Gestion de données patients, rigueur opérationnelle et flux administratifs.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-date" data-i18n="journey.x4.date">Mars 2019</div>
+            <div class="tl-role" data-i18n="journey.x4.role">Stage · Mairie du Kremlin-Bicêtre</div>
+            <div class="tl-place" data-i18n="journey.x4.place">Service Comptabilité</div>
+            <div class="tl-desc" data-i18n="journey.x4.desc">Logiciel de gestion comptable, traitement de factures et archivage numérique.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div class="contact-section" id="contact">
+  <div class="contact-bg-glow"></div>
+  <p class="section-label reveal" style="display:inline-flex;margin-bottom:20px;" data-i18n="contact.label">Contact</p>
+  <div class="contact-row reveal">
+    <a href="https://www.linkedin.com/in/yosr-jmil-880119362" target="_blank" rel="noopener noreferrer" class="contact-chip">
+      <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      LinkedIn
+    </a>
+  </div>
+
+  <!-- Marquee -->
+  <div class="marquee-wrap">
+    <div class="marquee-track" id="marqueeTrack"></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Yosr Jmil</p>
+  <p data-i18n="footer.text">EPF Paris-Cachan · Systèmes numériques et intelligents · Stagiaire chez Safran</p>
+</footer>
+
+<script>
+/* ══ TRADUCTIONS ══ */
+const i18n = {
+  fr: {
+    "nav.about":"À propos","nav.projects":"Projets","nav.skills":"Compétences","nav.journey":"Parcours","nav.contact":"Me contacter",
+    "hero.title":"Élève-ingénieure · EPF Paris-Cachan<br>Stagiaire ingénieure Data & IA · Safran Electronics & Defense",
+    "hero.cta":"Voir mes projets","hero.scroll":"Défiler",
+    "about.label":"À propos","about.heading":"Qui suis-je ?",
+    "about.p1":"Élève-ingénieure à l'EPF Paris-Cachan, je m'intéresse particulièrement à l'intelligence artificielle : comprendre comment ces systèmes sont conçus et les appliquer à des besoins concrets. Mon parcours m'a permis d'acquérir des bases solides en développement logiciel, en IoT et en architecture logicielle.",
+    "about.p2":"Aujourd'hui en 4e année dans la majeure <b>Systèmes numériques et intelligents</b>, je me concentre sur ce qui me passionne vraiment : l'<b>IA générative, les LLMs et le Machine Learning</b>. Depuis octobre 2026, je suis stagiaire chez <b>Safran Electronics & Defense</b>, où je construis un outil de veille stratégique basé sur l'IA : de la collecte et du chunking des documents jusqu'à la génération de réponses par LLM (RAG).",
+    "about.card1.title":"Disponible en alternance","about.card1.sub":"À partir de septembre 2026 · Île-de-France ou télétravail",
+    "about.card2.title":"Ce que je cherche","about.card2.sub":"IA générative · LLM · Machine Learning",
+    "about.card3.title":"Rythme souhaité","about.card3.sub":"3 semaines entreprise / 1 semaine école",
+    "about.card4.title":"Langues","about.card4.sub":"Français · Anglais · Arabe · Espagnol",
+    "projects.label":"Projets","projects.heading":"Stage & projets EPF",
+    "projects.p0.pill":"Stage · Safran Electronics & Defense · 2026","projects.p0.title":"Outil de veille stratégique par IA",
+    "projects.p0.desc":"Conception d'une chaîne complète de veille stratégique par IA générative : collecte de sources externes et internes, nettoyage, découpage (chunking) et vectorisation des documents, stockage en data lake, puis recherche et génération de réponses par LLM (RAG). Chaque résultat reste traçable jusqu'à sa source.",
+    "projects.p1.pill":"Projet Challenge EPF · 2026",
+    "projects.p1.desc":"Système de surveillance industrielle temps réel d'une ligne de rivetage robotisée, inspiré des usines Airbus/Safran. Simulateur Python de capteurs avec détection d'anomalies (seuils + Z-score), API FastAPI et application mobile React Native. Stack entièrement dockerisée.",
+    "projects.p2.pill":"IoT & Web · 3ème année","projects.p2.title":"Système Connecté & Dashboard Web",
+    "projects.p2.desc":"Déploiement de capteurs thermiques et d'humidité dans un gymnase, avec visualisation des données en temps réel via un site web HTML/CSS/JavaScript.",
+    "projects.p3.title":"Jeu interactif Java","projects.p3.desc":"Conception d'un jeu interactif complet avec interface graphique et logique logicielle, en architecture orientée objet.",
+    "projects.p4.pill":"Mécatronique · 2025","projects.p4.title":"Fauteuil roulant motorisé",
+    "projects.p4.desc":"Système de motorisation pour fauteuil roulant : intégration électronique, mécanique et programmation, dans le cadre d'un projet pluridisciplinaire.",
+    "projects.p5.title":"Modélisation 3D CATIA","projects.p5.desc":"Conception et assemblage de pièces mécaniques complexes sous CATIA, avec simulation multiphysique et choix de matériaux.",
+    "tag.elec":"Électronique","tag.meca":"Mécanique","tag.prog":"Programmation",
+    "skills.label":"Compétences",
+    "skills.cat0":"IA générative & data","skills.rag.ctx":"Veille IA · Safran","skills.llm.ctx":"Génération de réponses · Safran","skills.emb.ctx":"Vectorisation · recherche sémantique","skills.chunk.ctx":"Découpage de documents PDF · Safran","skills.pipe.ctx":"Collecte · nettoyage · data lake","skills.git.ctx":"Versioning · Safran","skills.drawio.ctx":"Logigrammes · Safran",
+    "skills.cat1":"Langages & développement","skills.cat2":"IoT & backend","skills.cat3":"Données & bureautique","skills.cat4":"CAO & simulation",
+    "skills.java.ctx":"Jeu interactif · POO","skills.python.ctx":"Safran · FactoryPulse","skills.web.ctx":"Dashboard IoT gymnase","skills.rn.ctx":"App mobile FactoryPulse",
+    "skills.fastapi.ctx":"API REST · FactoryPulse","skills.docker.ctx":"Stack dockerisée",
+    "skills.sql.ctx":"Bases de données","skills.excel.ctx":"Analyse & automatisation",
+    "skills.catia.ctx":"Modélisation 3D","skills.comsol.ctx":"Simulation multiphysique","skills.edupack.ctx":"Sélection matériaux",
+    "journey.label":"Parcours","journey.heading":"Formation & expériences.","journey.education":"Formation","journey.experience":"Expériences & Engagement",
+    "journey.e1.date":"Sept. 2023 – Présent","journey.e1.place":"Cycle ingénieur · Majeure Systèmes numériques et intelligents",
+    "journey.e2.place":"Baccalauréat général","journey.e2.desc":"Spécialisation Mathématiques et Physique-Chimie.",
+    "journey.x0.date":"Oct. 2026 – Janv. 2027","journey.x0.role":"Stage ingénieure Data &amp; IA · Safran Electronics & Defense","journey.x0.place":"Stage élève-ingénieure · Malakoff","journey.x0.desc":"Développement d'un outil de veille stratégique par IA générative (RAG) : collecte, nettoyage, chunking et vectorisation de documents, connexion à un LLM, avec traçabilité des sources.",
+    "journey.x1.date":"Depuis 2025","journey.x1.role":"Vice-Présidente · Tutorat EPF","journey.x1.place":"Engagement associatif","journey.x1.desc":"Pilotage d'une équipe de tuteurs, coordination du soutien scolaire, recrutement et suivi pédagogique.",
+    "journey.x2.date":"2024 – 2025","journey.x2.role":"Pôle Sponsor · EUROAVIA","journey.x2.place":"Engagement associatif","journey.x2.desc":"Recherche de partenaires stratégiques et développement des relations entreprises.",
+    "journey.x5.date":"2025 – 2026","journey.x5.role":"Pôle Com · EUROAVIA","journey.x5.place":"Engagement associatif","journey.x5.desc":"Communication et visibilité de l'association auprès des membres et partenaires.",
+    "journey.x3.role":"Stage d'Exécution · Cabinet Dentaire","journey.x3.place":"Stage professionnel","journey.x3.desc":"Gestion de données patients, rigueur opérationnelle et flux administratifs.",
+    "journey.x4.date":"Mars 2019","journey.x4.role":"Stage · Mairie du Kremlin-Bicêtre","journey.x4.place":"Service Comptabilité","journey.x4.desc":"Logiciel de gestion comptable, traitement de factures et archivage numérique.",
+    "contact.label":"Contact","contact.heading":"Vous avez un projet ?<br><span class='gradient-text'>Parlons-en.</span>",
+    "footer.text":"EPF Paris-Cachan · Systèmes numériques et intelligents · Stagiaire chez Safran",
+    "stat.projects":"Projets EPF","stat.years":"Années ingénieur","stat.langs":"Langues parlées","stat.tools":"Outils maîtrisés",
+    "tw.1":"IA générative · RAG · LLM","tw.2":"Veille stratégique IA chez Safran","tw.3":"Python · pipelines de données","tw.4":"IoT & Systèmes connectés"
+  },
+  en: {
+    "nav.about":"About","nav.projects":"Projects","nav.skills":"Skills","nav.journey":"Journey","nav.contact":"Contact me",
+    "hero.title":"Engineering Student · EPF Paris-Cachan<br>Data & AI Engineering Intern · Safran Electronics & Defense",
+    "hero.cta":"View my projects","hero.scroll":"Scroll",
+    "about.label":"About","about.heading":"Who am I?",
+    "about.p1":"As an engineering student at EPF Paris-Cachan, I am particularly interested in artificial intelligence: understanding how these systems are designed and applying them to real business needs. My studies have given me solid foundations in software development, IoT and software architecture.",
+    "about.p2":"Now in my 4th year in the <b>Intelligent Digital Systems</b> major, I focus on what I'm really passionate about: <b>generative AI, LLMs and Machine Learning</b>. Since October 2026, I've been an intern at <b>Safran Electronics & Defense</b>, building an AI-powered strategic intelligence tool: from document collection and chunking all the way to LLM-generated answers (RAG).",
+    "about.card1.title":"Available for work-study","about.card1.sub":"From September 2026 · Île-de-France or remote",
+    "about.card2.title":"What I'm looking for","about.card2.sub":"Generative AI · LLM · Machine Learning",
+    "about.card3.title":"Preferred schedule","about.card3.sub":"3 weeks company / 1 week school",
+    "about.card4.title":"Languages","about.card4.sub":"French · English · Arabic · Spanish",
+    "projects.label":"Projects","projects.heading":"Internship & EPF projects",
+    "projects.p0.pill":"Internship · Safran Electronics & Defense · 2026","projects.p0.title":"AI Strategic Intelligence Tool",
+    "projects.p0.desc":"Design of a complete AI-powered strategic intelligence pipeline: collection of external and internal sources, cleaning, document chunking and vectorization, data lake storage, then retrieval and LLM-generated answers (RAG). Every result stays traceable to its source.",
+    "projects.p1.pill":"EPF Challenge Project · 2026",
+    "projects.p1.desc":"Real-time industrial monitoring system for a robotized riveting line, inspired by Airbus/Safran factories. Python sensor simulator with anomaly detection (thresholds + Z-score), FastAPI and a React Native mobile app. Fully dockerized stack.",
+    "projects.p2.pill":"IoT & Web · 3rd year","projects.p2.title":"Connected System & Web Dashboard",
+    "projects.p2.desc":"Deployment of thermal and humidity sensors in a gymnasium, with real-time data visualization via an HTML/CSS/JavaScript website.",
+    "projects.p3.title":"Interactive Java Game","projects.p3.desc":"Design of a complete interactive game with graphical interface and software logic, using object-oriented architecture.",
+    "projects.p4.pill":"Mechatronics · 2025","projects.p4.title":"Motorized Wheelchair",
+    "projects.p4.desc":"Motorization system for a wheelchair: electronic, mechanical and programming integration within a multidisciplinary project.",
+    "projects.p5.title":"3D CATIA Modeling","projects.p5.desc":"Design and assembly of complex mechanical parts under CATIA, with multiphysics simulation and material selection.",
+    "tag.elec":"Electronics","tag.meca":"Mechanics","tag.prog":"Programming",
+    "skills.label":"Skills",
+    "skills.cat0":"Generative AI & data","skills.rag.ctx":"AI intelligence tool · Safran","skills.llm.ctx":"Answer generation · Safran","skills.emb.ctx":"Vectorization · semantic search","skills.chunk.ctx":"PDF document splitting · Safran","skills.pipe.ctx":"Collection · cleaning · data lake","skills.git.ctx":"Versioning · Safran","skills.drawio.ctx":"Process flowcharts · Safran",
+    "skills.cat1":"Languages & development","skills.cat2":"IoT & backend","skills.cat3":"Data & office tools","skills.cat4":"CAD & simulation",
+    "skills.java.ctx":"Interactive game · OOP","skills.python.ctx":"Safran · FactoryPulse","skills.web.ctx":"IoT gymnasium dashboard","skills.rn.ctx":"FactoryPulse mobile app",
+    "skills.fastapi.ctx":"REST API · FactoryPulse","skills.docker.ctx":"Dockerized stack",
+    "skills.sql.ctx":"Databases","skills.excel.ctx":"Analysis & automation",
+    "skills.catia.ctx":"3D Modeling","skills.comsol.ctx":"Multiphysics simulation","skills.edupack.ctx":"Material selection",
+    "journey.label":"Journey","journey.heading":"Education & experience.","journey.education":"Education","journey.experience":"Experience & Involvement",
+    "journey.e1.date":"Sept. 2023 – Present","journey.e1.place":"Engineering degree · Intelligent Digital Systems major",
+    "journey.e2.place":"High School Diploma","journey.e2.desc":"Specialization in Mathematics and Physics-Chemistry.",
+    "journey.x0.date":"Oct. 2026 – Jan. 2027","journey.x0.role":"Data & AI Engineering Intern · Safran Electronics & Defense","journey.x0.place":"Engineering internship · Malakoff","journey.x0.desc":"Building a generative-AI strategic intelligence tool (RAG): document collection, cleaning, chunking and vectorization, LLM integration, with full source traceability.",
+    "journey.x1.date":"Since 2025","journey.x1.role":"Vice-President · Tutorat EPF","journey.x1.place":"Student association","journey.x1.desc":"Leading a team of tutors, coordinating academic support, recruitment and pedagogical follow-up.",
+    "journey.x2.date":"2024 – 2025","journey.x2.role":"Sponsorship · EUROAVIA","journey.x2.place":"Student association","journey.x2.desc":"Finding strategic partners and developing company relationships.",
+    "journey.x5.date":"2025 – 2026","journey.x5.role":"Communications · EUROAVIA","journey.x5.place":"Student association","journey.x5.desc":"Communication and visibility of the association among members and partners.",
+    "journey.x3.role":"Internship · Dental Practice","journey.x3.place":"Professional internship","journey.x3.desc":"Patient data management, operational rigor and administrative workflows.",
+    "journey.x4.date":"Mar. 2019","journey.x4.role":"Internship · Kremlin-Bicêtre Town Hall","journey.x4.place":"Accounting Department","journey.x4.desc":"Accounting software, invoice processing and digital archiving.",
+    "contact.label":"Contact","contact.heading":"Got a project?<br><span class='gradient-text'>Let's talk.</span>",
+    "footer.text":"EPF Paris-Cachan · Intelligent Digital Systems · Intern at Safran",
+    "stat.projects":"EPF Projects","stat.years":"Engineering years","stat.langs":"Languages spoken","stat.tools":"Tools mastered",
+    "tw.1":"Generative AI · RAG · LLM","tw.2":"AI strategic intelligence at Safran","tw.3":"Python · data pipelines","tw.4":"IoT & Connected Systems"
+  }
+};
+
+let currentLang = 'fr';
+
+function applyLang(lang) {
+  currentLang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (i18n[lang][key] !== undefined) el.innerHTML = i18n[lang][key];
+  });
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+  document.documentElement.lang = lang;
+  // Update typewriter phrases
+  twPhrases = [i18n[lang]['tw.1'], i18n[lang]['tw.2'], i18n[lang]['tw.3'], i18n[lang]['tw.4']];
+}
+
+document.getElementById('langToggle').addEventListener('click', e => {
+  const btn = e.target.closest('.lang-btn');
+  if (btn) applyLang(btn.dataset.lang);
+});
+
+/* ══ DARK MODE ══ */
+document.getElementById('themeToggle').addEventListener('click', () => {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+  document.getElementById('iconMoon').style.display = isDark ? 'block' : 'none';
+  document.getElementById('iconSun').style.display = isDark ? 'none' : 'block';
+});
+
+/* ══ CURSEUR CUSTOM ══ */
+const cursor = document.getElementById('cursor');
+const cursorRing = document.getElementById('cursor-ring');
+let cx = 0, cy = 0, rx = 0, ry = 0;
+
+document.addEventListener('mousemove', e => {
+  cx = e.clientX; cy = e.clientY;
+  cursor.style.left = cx + 'px';
+  cursor.style.top = cy + 'px';
+});
+function animateRing() {
+  rx += (cx - rx) * 0.12;
+  ry += (cy - ry) * 0.12;
+  cursorRing.style.left = rx + 'px';
+  cursorRing.style.top = ry + 'px';
+  requestAnimationFrame(animateRing);
+}
+animateRing();
+
+document.querySelectorAll('a,button,[role="button"]').forEach(el => {
+  el.addEventListener('mouseenter', () => { cursor.classList.add('hover'); cursorRing.classList.add('hover'); });
+  el.addEventListener('mouseleave', () => { cursor.classList.remove('hover'); cursorRing.classList.remove('hover'); });
+});
+document.addEventListener('mousedown', () => cursor.classList.add('click'));
+document.addEventListener('mouseup', () => cursor.classList.remove('click'));
+
+/* ══ TYPEWRITER ══ */
+let twPhrases = [i18n.fr['tw.1'], i18n.fr['tw.2'], i18n.fr['tw.3'], i18n.fr['tw.4']];
+let twIndex = 0, twChar = 0, twDeleting = false;
+const twEl = document.getElementById('typewriter');
+
+function typewriterTick() {
+  const phrase = twPhrases[twIndex % twPhrases.length];
+  if (!twDeleting) {
+    twChar++;
+    twEl.textContent = phrase.slice(0, twChar);
+    if (twChar === phrase.length) { twDeleting = true; setTimeout(typewriterTick, 1800); return; }
+    setTimeout(typewriterTick, 55);
+  } else {
+    twChar--;
+    twEl.textContent = phrase.slice(0, twChar);
+    if (twChar === 0) { twDeleting = false; twIndex++; setTimeout(typewriterTick, 400); return; }
+    setTimeout(typewriterTick, 28);
+  }
+}
+setTimeout(typewriterTick, 1200);
+
+/* ══ HEX CANVAS ══ */
+(function(){
+  const canvas = document.getElementById('neural-canvas');
+  const ctx = canvas.getContext('2d');
+  let W, H, hexes = [], mouse = {x:-9999,y:-9999};
+  const HEX_R=32, HEX_H=HEX_R*2, HEX_W=Math.sqrt(3)*HEX_R;
+  function resize(){ W=canvas.width=canvas.offsetWidth; H=canvas.height=canvas.offsetHeight; buildGrid(); }
+  function hexPath(cx,cy,r){ ctx.beginPath(); for(let i=0;i<6;i++){const a=Math.PI/180*(60*i-30),x=cx+r*Math.cos(a),y=cy+r*Math.sin(a);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);} ctx.closePath(); }
+  function buildGrid(){ hexes=[]; const cols=Math.ceil(W/HEX_W)+2,rows=Math.ceil(H/(HEX_H*0.75))+2; for(let row=-1;row<rows;row++) for(let col=-1;col<cols;col++) hexes.push({cx:col*HEX_W+(row%2===0?0:HEX_W/2),cy:row*HEX_H*0.75,phase:Math.random()*Math.PI*2,speed:0.004+Math.random()*0.006,baseAlpha:0.04+Math.random()*0.06,bit:Math.random()<0.5?'0':'1'}); }
+  canvas.addEventListener('mousemove',e=>{const r=canvas.getBoundingClientRect();mouse.x=e.clientX-r.left;mouse.y=e.clientY-r.top;});
+  canvas.addEventListener('mouseleave',()=>{mouse.x=-9999;mouse.y=-9999;});
+  let t=0;
+  function draw(){ ctx.clearRect(0,0,W,H); t++;
+    for(const h of hexes){ h.phase+=h.speed; const dx=h.cx-mouse.x,dy=h.cy-mouse.y,dist=Math.sqrt(dx*dx+dy*dy),mg=Math.max(0,1-dist/180),wave=Math.sin(h.phase+h.cx*0.012-h.cy*0.008+t*0.012)*0.5+0.5,alpha=h.baseAlpha+wave*0.18+mg*0.55,ratio=wave*0.6+mg*0.4,r=Math.round(44*(1-ratio)+169*ratio),g=Math.round(59*(1-ratio)+130*ratio),b=Math.round(78*(1-ratio)+79*ratio); hexPath(h.cx,h.cy,HEX_R-1.5); ctx.fillStyle=`rgba(${r},${g},${b},${alpha*0.35})`; ctx.fill(); ctx.strokeStyle=`rgba(${r},${g},${b},${alpha})`; ctx.lineWidth=mg>0.1?1.4:0.7; ctx.stroke(); if(wave>0.82||mg>0.4){const dotA=(wave>0.82?(wave-0.82)/0.18:0)*0.6+mg*0.8; ctx.font='10px "JetBrains Mono",monospace'; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillStyle=`rgba(${r},${g},${b},${dotA})`; ctx.fillText(h.bit,h.cx,h.cy);} }
+    requestAnimationFrame(draw); }
+  window.addEventListener('resize',resize); resize(); draw();
+})();
+
+/* ══ PROJECT CARD GLOW ══ */
+document.querySelectorAll('.project-card').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const rect = card.getBoundingClientRect();
+    card.style.setProperty('--mouse-x', (e.clientX - rect.left) + 'px');
+    card.style.setProperty('--mouse-y', (e.clientY - rect.top) + 'px');
+  });
+});
+
+
+/* ══ MARQUEE ══ */
+const marqueeItems = ['RAG','LLM','Chunking','Embeddings','Python','Git','FastAPI','Docker','React Native','Java','HTML/CSS/JS','SQL','IoT'];
+const track = document.getElementById('marqueeTrack');
+if (track) {
+  const doubled = [...marqueeItems, ...marqueeItems];
+  track.innerHTML = doubled.map(item => `<span class="marquee-item"><span class="marquee-dot"></span>${item}</span>`).join('');
+}
+
+/* ══ LOADER ══ */
+setTimeout(function() {
+  var loader = document.getElementById('loader');
+  loader.style.opacity = '0';
+  setTimeout(function() { loader.style.display = 'none'; }, 600);
+}, 2200);
+
+/* ══ SCROLL REVEAL ══ */
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ setTimeout(()=>e.target.classList.add('visible'), e.target.dataset.delay||0); obs.unobserve(e.target); } });
+},{threshold:.12});
+document.querySelectorAll('.reveal,.project-card,.tool-chip,.tl-item').forEach((el,i)=>{ el.dataset.delay=(i%5)*70; obs.observe(el); });
+document.querySelectorAll('.tool-chip').forEach((c,i)=>{ c.style.transitionDelay=`${i*40}ms`; });
+const tlGrid = document.querySelector('.timeline-grid');
+if(window.innerWidth<700 && tlGrid) tlGrid.style.gridTemplateColumns='1fr';
+</script>
+</body>
+</html>
